@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #212121 !important;
+}
+
+.board{
+    background-color: black;
+    display: grid;
+    width: 100%;
+    max-width: 550px;
+    max-height: 550px;
+    aspect-ratio: 1 / 1;
+
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+
+    gap: 0px;
+
+}
+
+.white{
+    background-color: #EEEEEE;
+}
+
+.black{
+    background-color: #000000;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
