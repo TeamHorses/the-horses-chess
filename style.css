@@ -8,31 +8,82 @@ body{
     background-color: #212121 !important;
 }
 
-.board{
+.board{                                 
     background-color: black;
     display: grid;
     width: 100%;
     max-width: 550px;
     max-height: 550px;
-    aspect-ratio: 1 / 1;
 
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    aspect-ratio: 1 / 1;                    /*Asegurando que el tablero siempre quede cuadrado*/                         
 
-    gap: 0px;
+    grid-template-columns: repeat(8, 1fr);  /*Una repeticion de 8 columnas con una fraccion de espacio para cada una*/
+    grid-template-rows: repeat(8, 1fr);     /*Una repeticion de 8 filas con una fraccion de espacio para cada una*/
+    gap: 0px;                               /*0 Espacios entre celdas*/
 
+}
+
+.white, .black {
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .white{
-    background-color: #EEEEEE;
+    background-color: #FED8B1;
 }
 
 .black{
-    background-color: #000000;
+    background-color: #6F4E37;
 }
 
-.container {
+.board-container {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Ajustar tablero a la pag */
     align-items: center;
 }
+
+.cell {
+    background-size: 60px 60px; /* Ajustar tamaño a las piezas*/
+}
+
+.cell {
+    background-position: center; /* Centra la imagen en la celda */
+}
+
+/* Piezas Blancas */
+.cell-0-0 { background-image: url('images/white-rook.png'); }
+.cell-0-1 { background-image: url('images/white-knight.png'); }
+.cell-0-2 { background-image: url('images/white-bishop.png'); }
+.cell-0-3 { background-image: url('images/white-queen.png'); }
+.cell-0-4 { background-image: url('images/white-king.png'); }
+.cell-0-5 { background-image: url('images/white-bishop.png'); }
+.cell-0-6 { background-image: url('images/white-knight.png'); }
+.cell-0-7 { background-image: url('images/white-rook.png'); }
+
+.cell-1-0 { background-image: url('images/white-pawn.png'); }
+.cell-1-1 { background-image: url('images/white-pawn.png'); }
+.cell-1-2 { background-image: url('images/white-pawn.png'); }
+.cell-1-3 { background-image: url('images/white-pawn.png'); }
+.cell-1-4 { background-image: url('images/white-pawn.png'); }
+.cell-1-5 { background-image: url('images/white-pawn.png'); }
+.cell-1-6 { background-image: url('images/white-pawn.png'); }
+.cell-1-7 { background-image: url('images/white-pawn.png'); }
+
+/* Piezas Negras */
+.cell-6-0 { background-image: url('images/black-pawn.png'); }
+.cell-6-1 { background-image: url('images/black-pawn.png'); }
+.cell-6-2 { background-image: url('images/black-pawn.png'); }
+.cell-6-3 { background-image: url('images/black-pawn.png'); }
+.cell-6-4 { background-image: url('images/black-pawn.png'); }
+.cell-6-5 { background-image: url('images/black-pawn.png'); }
+.cell-6-6 { background-image: url('images/black-pawn.png'); }
+.cell-6-7 { background-image: url('images/black-pawn.png'); }
+
+.cell-7-0 { background-image: url('images/black-rook.png'); }
+.cell-7-1 { background-image: url('images/black-knight.png'); }
+.cell-7-2 { background-image: url('images/black-bishop.png'); }
+.cell-7-3 { background-image: url('images/black-queen.png'); }
+.cell-7-4 { background-image: url('images/black-king.png'); }
+.cell-7-5 { background-image: url('images/black-bishop.png'); }
+.cell-7-6 { background-image: url('images/black-knight.png'); }
+.cell-7-7 { background-image: url('images/black-rook.png'); }
